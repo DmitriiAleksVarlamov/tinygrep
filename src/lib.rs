@@ -10,7 +10,7 @@ pub struct Config {
 impl Config {
     pub fn build(args: &[String]) -> Result<Config, &'static String> {
         if args.len() < 3 {
-            panic!("Not enough arguments. You should give atleast 2");
+            eprintln!("Not enough arguments. You should give atleast 2");
         }
         let query = args[1].clone();
         let file_name = args[2].clone();
